@@ -56,10 +56,10 @@ services:
     # =========================================================================
     volumes:
       # Persistent workspace for your Antigravity projects
-      - ./data/workspace:/home/antigravity/workspace
+      - ./data/antigravity/workspace:/home/antigravity/workspace
 
       # Persistent configuration
-      - ./data/config:/home/antigravity/.config
+      - ./data/antigravity/config:/home/antigravity/.config
 
       # Persistent Antigravity-specific data
       - ./data/antigravity:/home/antigravity/.antigravity
