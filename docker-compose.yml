@@ -37,10 +37,6 @@ services:
       # Auto-launch Antigravity fullscreen on connect
       - AUTOSTART_ANTIGRAVITY=${AUTOSTART_ANTIGRAVITY:-true}
 
-      # NVIDIA runtime
-      - NVIDIA_VISIBLE_DEVICES=all
-      - NVIDIA_DRIVER_CAPABILITIES=all
-
       # Idle optimization settings
       - IDLE_CHECK_INTERVAL=${IDLE_CHECK_INTERVAL:-30}
       - IDLE_TIMEOUT=${IDLE_TIMEOUT:-60}
@@ -69,12 +65,6 @@ services:
       - ./data/antigravity:/home/antigravity/.antigravity
       # Share clipboard with host (Linux only)
       # - /tmp/.X11-unix:/tmp/.X11-unix:ro
-
-      # =========================================================================
-      # Runtime Configuration
-      # =========================================================================
-      # Use NVIDIA runtime
-    runtime: nvidia
 
     # Security - keep container isolated but functional
     security_opt:
