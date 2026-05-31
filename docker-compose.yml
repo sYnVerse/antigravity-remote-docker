@@ -65,7 +65,7 @@ services:
       - ./data/antigravity:/home/antigravity/.antigravity
       
       # Share clipboard with host (Linux only)
-      - /tmp/.X11-unix:/tmp/.X11-unix:ro
+      #- /tmp/.X11-unix:/tmp/.X11-unix:ro
 
     # Security - keep container isolated but functional
     security_opt:
