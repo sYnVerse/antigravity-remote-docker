@@ -17,20 +17,6 @@ services:
     container_name: antigravity-remote
 
     # =========================================================================
-    # GPU Configuration
-    # =========================================================================
-    deploy:
-      resources:
-        reservations:
-          devices:
-            - driver: nvidia
-              count: all
-              capabilities: [ gpu ]
-        limits:
-          memory: 16G
-          cpus: '8'
-
-    # =========================================================================
     # Environment Variables
     # =========================================================================
     environment:
