@@ -29,7 +29,7 @@ services:
       - VNC_PASSWORD=${VNC_PASSWORD:-antigravity}
 
       # Timezone
-      - TZ=${TZ:-America/Denver}
+      - TZ=${TZ:-America/Los_Angles}
 
       # Auto-update Antigravity
       - ANTIGRAVITY_AUTO_UPDATE=true
@@ -56,15 +56,15 @@ services:
     # =========================================================================
     volumes:
       # Persistent workspace for your Antigravity projects
-      - ./data/antigravity/workspace:/home/antigravity/workspace
+      - ./data/workspace:/home/antigravity/workspace
 
       # Persistent configuration
-      - ./data/antigravity/config:/home/antigravity/.config
+      - ./data/config:/home/antigravity/.config
 
       # Persistent Antigravity-specific data
       - ./data/antigravity:/home/antigravity/.antigravity
       # Share clipboard with host (Linux only)
-      # - /tmp/.X11-unix:/tmp/.X11-unix:ro
+       - /tmp/.X11-unix:/tmp/.X11-unix:ro
 
     # Security - keep container isolated but functional
     security_opt:
